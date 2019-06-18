@@ -69,13 +69,13 @@ public class S3riceSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) 
       throws Exception {
-        /*auth
+        auth
           .inMemoryAuthentication()
           .withUser("user").password(passwordEncoder.encode("password")).roles("USER")
           .and()
-          .withUser("admin").password(passwordEncoder.encode("admin")).roles("ADMIN");*/
+          .withUser("shaiksha").password(passwordEncoder.encode("shaiksha")).roles("ADMIN");
 
-		auth.authenticationProvider(daoAuthenticationProvider);
+		//auth.authenticationProvider(daoAuthenticationProvider);
     }
 
 
