@@ -1,0 +1,8 @@
+applications:
+- name: s3rice-app
+path: target/s3rice-app-1-0.0.1-SNAPSHOT.jar
+domain: cfapps.io
+memory: 1G
+instances: 1
+services:
+  - s3rice-db
