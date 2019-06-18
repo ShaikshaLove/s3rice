@@ -18,7 +18,7 @@ public class TransactionIdGenerator implements IdentifierGenerator {
 		Connection con=session.connection();
 		try {
 			Statement stmt=con.createStatement();
-			ResultSet rs=stmt.executeQuery("select nextval('transaction_seq.nextval')");
+			ResultSet rs=stmt.executeQuery("select nextval('transaction_seq')");
 			rs.next();
 			id=id+rs.getString(1);
 		} catch (SQLException e) {
