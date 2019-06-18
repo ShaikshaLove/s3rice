@@ -18,7 +18,7 @@ public class OrderIdGenerator implements IdentifierGenerator {
 		Connection con=session.connection();
 		try {
 			Statement stmt=con.createStatement();
-			ResultSet rs=stmt.executeQuery("select nextval('account_seq.nextval')");
+			ResultSet rs=stmt.executeQuery("select nextval('account_seq')");
 			rs.next();
 			id=id+rs.getString(1);
 		} catch (SQLException e) {
